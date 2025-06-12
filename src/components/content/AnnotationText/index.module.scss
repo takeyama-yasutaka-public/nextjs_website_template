@@ -1,0 +1,11 @@
+@use '@/styles/global' as *;
+
+.annotationText {
+  &[data-modifier='alert'] {
+    color: $s-color_status_alert;
+  }
+
+  &[data-modifier='note'] {
+    @include font($font-size_xs);
+  }
+}

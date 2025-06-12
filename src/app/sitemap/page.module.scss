@@ -1,0 +1,58 @@
+@use '@/styles/global' as *;
+
+.sitemap {
+  height: calc(((1rem * 1.4) + pxrem(20)) * 11);
+  margin-bottom: pxrem(-20);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  column-gap: pxrem(40);
+  row-gap: pxrem(20);
+  line-height: $line-height_s;
+
+  @include media(sp) {
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  > li {
+    width: calc((100% - pxrem(40)) / 2);
+
+    &:nth-child(4) {
+      margin-top: calc((1rem * 1.4) + pxrem(20));
+    }
+
+    @include media(sp) {
+      width: 100%;
+
+      &:nth-child(3) {
+        margin-bottom: 0;
+      }
+
+      &:nth-child(4) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: pxrem(20);
+  }
+
+  .child {
+    padding-left: pxrem(20);
+  }
+
+  p {
+    display: inline-block;
+    margin-bottom: pxrem(20);
+    color: $s-color_text_body;
+    text-decoration: none;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

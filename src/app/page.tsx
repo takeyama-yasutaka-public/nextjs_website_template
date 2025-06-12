@@ -1,95 +1,115 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+/*********************************
+    インポート
+*********************************/
 
-export default function Home() {
+//コンポーネント
+import * as Content from '@/components/content/index'
+import * as Action from '@/components/action/index'
+import * as Function from '@/components/function/index'
+import * as PageHome from '@/components/page/home/index'
+//画像
+import MediaImage from '@/images/image_16-9.png'
+import EyecatchImage from '@/images/eyecatch.png'
+
+/*********************************
+    変数定義
+*********************************/
+
+//トップページか否か
+const isHome = true
+
+/*********************************
+   ページデータのエクスポート
+*********************************/
+
+export default async function Page() {
+  //ページの出力
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      <Function.StructuredData isHome={isHome} />
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <Action.Slideshow/>
+      
+      <PageHome.Massage>
+        <PageHome.MassageCatchPhrase>
+          キャッチフレーズ
+        </PageHome.MassageCatchPhrase>
+        <PageHome.MassageText>
+          テキストテキストテキストテキストテキストテキスト<br/>
+          テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br/>
+          テキストテキストテキストテキストテキスト
+        </PageHome.MassageText>
+      </PageHome.Massage>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
+      <PageHome.MediaGroup>
+        <PageHome.Media image={MediaImage} alt="メディアイメージ">
+          <Content.Heading h="h2" modifier="first">見出し</Content.Heading>
           <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br/>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
           </p>
-        </a>
-      </div>
-    </main>
-  );
+        </PageHome.Media>
+        <PageHome.Media modifier="second" image={MediaImage} alt="メディアイメージ">
+          <Content.Heading h="h2" modifier="first">見出し</Content.Heading>
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br/>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          </p>
+        </PageHome.Media>
+        <PageHome.Media modifier="third" image={MediaImage} alt="メディアイメージ">
+          <Content.Heading h="h2" modifier="first">見出し</Content.Heading>
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br/>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          </p>
+        </PageHome.Media>
+      </PageHome.MediaGroup>
+
+      <PageHome.Container modifier="results">
+        <PageHome.ContainerHeader>
+          事業実績
+        </PageHome.ContainerHeader>
+        <Content.CardGroup modifier="column3">
+          <Content.Card href="/business/achievement/category" image={EyecatchImage} alt="カード">
+            <Content.Heading h="h3" modifier="fifth">事業カテゴリ1</Content.Heading>
+            <Content.CardText>
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </Content.CardText>
+          </Content.Card>
+          <Content.Card href="/business/achievement/category" image={EyecatchImage} alt="カード">
+            <Content.Heading h="h3" modifier="fifth">事業カテゴリ2</Content.Heading>
+            <Content.CardText>
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </Content.CardText>
+          </Content.Card>
+          <Content.Card href="/business/achievement/category" image={EyecatchImage} alt="カード">
+            <Content.Heading h="h3" modifier="fifth">事業カテゴリ3</Content.Heading>
+            <Content.CardText>
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </Content.CardText>
+          </Content.Card>
+        </Content.CardGroup>
+      </PageHome.Container>
+      
+      <PageHome.Container modifier="news">
+        <PageHome.ContainerHeader>
+          ニュース
+        </PageHome.ContainerHeader>
+        <Content.NewsPosts>
+          <Content.NewsPostsItem href="/news/single" time="2023-11-01T09:00:00Z" tagNew={true} title="ニュースタイトル"/>
+          <Content.NewsPostsItem href="/news/single" time="2023-11-01T09:00:00Z" tagImportant={true} title="ニュースタイトル"/>
+          <Content.NewsPostsItem href="/news/single" time="2023-11-01T09:00:00Z" title="ニュースタイトル"/>
+        </Content.NewsPosts>
+      </PageHome.Container>
+
+      <PageHome.Container modifier="cta">
+        <Content.CtaArea modifier="bgNone">
+          <Content.CtaAreaTitle>気軽にお問い合わせください</Content.CtaAreaTitle>
+          <Content.Divider/>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          <Content.Button href="/contact">お問い合わせをする</Content.Button>
+        </Content.CtaArea>
+      </PageHome.Container>
+    </>
+  )
 }

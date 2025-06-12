@@ -1,0 +1,21 @@
+@use '@/styles/global' as *;
+
+.inputArea {
+  display: none;
+  flex-direction: column;
+  gap: pxrem(20);
+
+  &[data-modifier='active'] {
+    display: flex;
+  }
+}
+
+.confirmArea {
+  display: none;
+  flex-direction: column;
+  gap: pxrem(20);
+
+  &[data-modifier='active'] {
+    display: flex;
+  }
+}

@@ -1,0 +1,23 @@
+@use '@/styles/global' as *;
+
+.pageVisual {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: pxrem(200);
+  background-color: $p-color_grey_50;
+
+  .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: $content_width;
+  }
+
+  h1 {
+    @include font($font-size_xxxxxl);
+    line-height: $line-height_s;
+    font-weight: $font-weight_m;
+  }
+}

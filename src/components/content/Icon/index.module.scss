@@ -1,0 +1,11 @@
+@use '@/styles/global' as *;
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  gap: pxrem(5);
+}
+
+.iconIcon {
+  @include font($font-size_s);
+}

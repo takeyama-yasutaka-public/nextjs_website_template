@@ -1,0 +1,110 @@
+@use '@/styles/global' as *;
+
+$solid-circle-icon: 'data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C!--!Font%20Awesome%20Free%206.6.0%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%2Ffree%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22%231a1a1a%22%20d%3D%22M256%20512A256%20256%200%201%200%20256%200a256%20256%200%201%200%200%20512z%22%2F%3E%3C%2Fsvg%3E';
+$regular-circl-icon: 'data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C!--!Font%20Awesome%20Free%206.6.0%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%2Ffree%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22%231a1a1a%22%20d%3D%22M464%20256A208%20208%200%201%200%2048%20256a208%20208%200%201%200%20416%200zM0%20256a256%20256%200%201%201%20512%200A256%20256%200%201%201%200%20256z%22%2F%3E%3C%2Fsvg%3E';
+
+.bulletList {
+  display: flex;
+  flex-direction: column;
+  gap: pxrem(10);
+
+  > li {
+    position: relative;
+    padding-left: 0.8em;
+    line-height: $line-height_s;
+
+    &::before {
+      content: url($solid-circle-icon);
+      position: absolute;
+      top: -0.2em;
+      left: 0;
+      width: pxrem(8.6);
+    }
+  }
+
+  > li > ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: pxrem(10);
+    gap: pxrem(10);
+  }
+
+  > li > ul > li {
+    position: relative;
+    padding-left: 0.8em;
+    line-height: $line-height_s;
+
+    &::before {
+      content: url($regular-circl-icon);
+      position: absolute;
+      top: -0.2em;
+      left: 0;
+      width: pxrem(8.6);
+    }
+  }
+}
+
+.orderList {
+  counter-reset: order-list;
+  display: flex;
+  flex-direction: column;
+  gap: pxrem(10);
+
+  > li {
+    position: relative;
+    padding-left: 1.3em;
+    line-height: $line-height_s;
+
+    &::before {
+      counter-increment: order-list;
+      content: counter(order-list);
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      width: 1.6em;
+      height: 1.6em;
+      padding-left: 0.1em;
+      background-color: $p-color_grey_600;
+      border-radius: 100px;
+      color: $s-color_text_on-fill;
+      @include font($font-size_xxs);
+      line-height: $line-height_s;
+    }
+  }
+
+  > li > ol {
+    counter-reset: child-order-list;
+    display: flex;
+    flex-direction: column;
+    margin-top: pxrem(10);
+    gap: pxrem(10);
+  }
+
+  > li > ol > li {
+    position: relative;
+    padding-left: 1.3em;
+    line-height: $line-height_s;
+
+    &::before {
+      counter-increment: child-order-list;
+      content: counter(child-order-list);
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      width: 1.6em;
+      height: 1.6em;
+      padding-left: 0.1em;
+      background-color: $p-color_grey_300;
+      border-radius: 100px;
+      color: $s-color_text_on-fill;
+      @include font($font-size_xxs);
+      line-height: $line-height_s;
+    }
+  }
+}

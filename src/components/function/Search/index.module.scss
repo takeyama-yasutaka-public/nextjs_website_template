@@ -1,0 +1,15 @@
+@use '@/styles/global' as *;
+
+.SearchForm {
+  &[data-modifier='pc-only'] {
+    @include media(sp) {
+      display: none;
+    }
+  }
+
+  &[data-modifier='sp-only'] {
+    @include media(pc) {
+      display: none;
+    }
+  }
+}

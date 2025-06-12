@@ -1,0 +1,9 @@
+@use '@/styles/global' as *;
+
+.filter {
+  display: flex;
+  padding: pxrem(10);
+  gap: pxrem(20);
+  flex-wrap: wrap;
+  line-height: $line-height_s;
+}

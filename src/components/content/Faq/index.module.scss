@@ -1,0 +1,54 @@
+@use '@/styles/global' as *;
+
+.faqItem {
+  display: flex;
+  flex-direction: column;
+  padding: pxrem(20) 0;
+  border-bottom: 1px solid $p-color_grey_300;
+  gap: pxrem(10);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .row {
+    position: relative;
+    min-height: pxrem(40);
+    padding-left: pxrem(55);
+  }
+
+  .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: pxrem(40);
+    height: pxrem(40);
+    border-radius: 100px;
+    line-height: $line-height_same;
+    font-weight: $font-weight_b;
+
+    &[data-modifier='question'] {
+      background-color: $p-color_grey_600;
+      border: 1px solid transparent;
+      color: $s-color_text_on-fill;
+    }
+
+    &[data-modifier='answer'] {
+      background-color: $p-color_white;
+      border: 1px solid $p-color_grey_600;
+      color: $p-color_grey_600;
+    }
+  }
+
+  .questionText {
+    padding-top: calc((pxrem(40) - ($font-size_m * $line-height_m)) / 2);
+    font-weight: $font-weight_m;
+  }
+
+  .body {
+    padding-top: calc((pxrem(40) - ($font-size_m * $line-height_m)) / 2);
+  }
+}

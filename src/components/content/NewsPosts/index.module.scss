@@ -1,0 +1,39 @@
+@use '@/styles/global' as *;
+
+.newsPostsItem {
+  a {
+    display: flex;
+    flex-direction: column;
+    padding: pxrem(10);
+    border-bottom: 1px solid $p-color_grey_300;
+    color: $s-color_menu-link_normal;
+    text-decoration: none;
+    line-height: $line-height_s;
+    gap: pxrem(10);
+    transition: $transition_high;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $p-color_opacity_black_005;
+      }
+    }
+
+    @media (hover: none) {
+      -webkit-tap-highlight-color: transparent;
+
+      &:active {
+        background-color: $p-color_opacity_black_005;
+      }
+    }
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: pxrem(10);
+  }
+
+  time {
+    @include font($font-size_s);
+  }
+}

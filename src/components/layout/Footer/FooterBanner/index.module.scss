@@ -1,0 +1,30 @@
+@use '@/styles/global' as *;
+
+.footerBanner {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: pxrem(10);
+
+  @include media(sp) {
+    justify-content: flex-start;
+  }
+
+  a {
+    transition: $transition_high;
+
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    @media (hover: none) {
+      -webkit-tap-highlight-color: transparent;
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+  }
+}

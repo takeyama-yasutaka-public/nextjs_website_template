@@ -1,0 +1,41 @@
+@use '@/styles/global' as *;
+
+.massage {
+  display: flex;
+  padding: pxrem(120) 0px pxrem(20) 0px;
+  flex-direction: column;
+  align-items: center;
+
+  .inner {
+    display: flex;
+    max-width: pxrem(1200);
+    padding: pxrem(20);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: pxrem(20);
+
+    @include media(sp) {
+      gap: pxrem(40);
+    }
+  }
+}
+
+.massageCatchPhrase {
+  @include font($font-size_xxxxxl);
+  line-height: $line-height_s;
+  font-weight: $font-weight_m;
+
+  @include media(sp) {
+    @include font($font-size_xxxl);
+  }
+}
+
+.massageText {
+  @include font($font-size_xxl);
+  text-align: center;
+
+  @include media(sp) {
+    @include font($font-size_l);
+  }
+}

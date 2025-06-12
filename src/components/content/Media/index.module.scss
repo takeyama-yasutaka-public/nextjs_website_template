@@ -1,0 +1,45 @@
+@use '@/styles/global' as *;
+
+.media {
+  display: flex;
+  align-items: center;
+  gap: pxrem(20);
+
+  @include media(sp) {
+    flex-direction: column;
+    gap: pxrem(10);
+  }
+
+  &[data-modifier='reverse'] {
+    flex-direction: row-reverse;
+
+    @include media(sp) {
+      flex-direction: column;
+    }
+  }
+
+  > img {
+    width: 30%;
+    @include image-aspect-ratio(ratio_3-2);
+
+    @include media(sp) {
+      width: 100%;
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: pxrem(10);
+    flex: 1;
+  }
+}
+
+.mediaText {
+  @include font($font-size_s);
+}
+
+.mediaButtonWrapper {
+  display: flex;
+  justify-content: flex-end;
+}

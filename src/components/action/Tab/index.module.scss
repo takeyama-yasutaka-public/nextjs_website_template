@@ -1,0 +1,58 @@
+@use '@/styles/global' as *;
+
+.tabItem {
+  display: none;
+  padding: pxrem(20);
+  animation: tabAnime 1s forwards;
+
+  &[data-modifier='active'] {
+    display: block;
+  }
+}
+
+@keyframes tabAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tabNavigation {
+  display: flex;
+}
+
+.tabNavigationItem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: pxrem(10);
+  border-bottom: 4px solid $p-color_grey_300;
+  line-height: $line-height_s;
+  font-weight: $font-weight_m;
+  transition: $transition_high;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $p-color_opacity_black_005;
+      border-bottom-color: $p-color_grey_600;
+    }
+  }
+
+  @media (hover: none) {
+    -webkit-tap-highlight-color: transparent;
+
+    &:active {
+      background-color: $p-color_opacity_black_005;
+      border-bottom-color: $p-color_grey_600;
+    }
+  }
+
+  &[data-modifier='active'] {
+    background-color: $p-color_opacity_black_005;
+    border-bottom-color: $p-color_grey_600;
+    pointer-events: none;
+  }
+}

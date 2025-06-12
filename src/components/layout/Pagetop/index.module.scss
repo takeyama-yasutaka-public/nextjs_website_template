@@ -1,0 +1,42 @@
+@use '@/styles/global' as *;
+
+.pagetop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: max(pxrem(40), ((100% - $content_width) / 2) - pxrem(40));
+  bottom: pxrem(20);
+  width: pxrem(40);
+  height: pxrem(40);
+  background-color: $p-color_black;
+  border-radius: 100px;
+  z-index: $z-index_pagetop;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $transition_high, background-color $transition_high;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  @media (hover: none) {
+    -webkit-tap-highlight-color: transparent;
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  &[data-modifier='active'] {
+    opacity: 0.3;
+    visibility: visible;
+  }
+
+  .icon {
+    color: $p-color_white;
+    @include font(20px);
+  }
+}

@@ -1,0 +1,26 @@
+@use '@/styles/global' as *;
+
+.massage {
+  padding-bottom: pxrem(20);
+  text-align: center;
+}
+
+.media {
+  display: flex;
+  flex-direction: column;
+  gap: pxrem(20);
+  padding-bottom: pxrem(20);
+}
+
+.priceBox {
+  display: flex;
+  flex-direction: column;
+  gap: pxrem(20);
+}
+
+.heading {
+  @include font($font-size_xxl);
+  line-height: $line-height_s;
+  font-weight: $font-weight_b;
+  text-align: center;
+}

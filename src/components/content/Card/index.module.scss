@@ -1,0 +1,82 @@
+@use '@/styles/global' as *;
+
+.cardGroup {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: pxrem(20);
+
+  @include media(sp) {
+    flex-direction: column;
+  }
+
+  &[data-modifier='column3'] {
+    > div,
+    > a {
+      width: calc((100% - (pxrem(20) * 2)) / 3);
+
+      @include media(sp) {
+        width: 100%;
+      }
+    }
+  }
+
+  &[data-modifier='column4'] {
+    > div,
+    > a {
+      width: calc((100% - (pxrem(20) * 3)) / 4);
+
+      @include media(sp) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: $p-color_white;
+  border: 1px solid $p-color_grey_300;
+  border-radius: 4px;
+  overflow: hidden;
+
+  &[data-modifier='link'] {
+    display: block;
+    border: none;
+    color: $s-color_menu-link_normal;
+    text-decoration: none;
+    box-shadow: $elevation_style1;
+    transition: $transition_high;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $p-color_grey_50;
+      }
+    }
+
+    @media (hover: none) {
+      -webkit-tap-highlight-color: transparent;
+
+      &:active {
+        background-color: $p-color_grey_50;
+      }
+    }
+  }
+
+  > img {
+    width: 100%;
+    @include image-aspect-ratio(ratio_16-9);
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    padding: pxrem(20);
+    gap: pxrem(10);
+  }
+}
+
+.cardText {
+  @include font($font-size_s);
+}

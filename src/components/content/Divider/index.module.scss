@@ -1,0 +1,6 @@
+@use '@/styles/global' as *;
+
+.divider {
+  width: 100%;
+  border-color: $s-color_border_divider;
+}

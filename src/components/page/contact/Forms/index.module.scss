@@ -1,0 +1,91 @@
+@use '@/styles/global' as *;
+
+.inputArea {
+  display: none;
+  flex-direction: column;
+  gap: pxrem(40);
+
+  &[data-modifier='active'] {
+    display: flex;
+  }
+}
+
+.confirmArea {
+  display: none;
+  flex-direction: column;
+  gap: pxrem(40);
+
+  &[data-modifier='active'] {
+    display: flex;
+  }
+}
+
+.formArea {
+  display: flex;
+  flex-direction: column;
+  gap: pxrem(40);
+
+  &[data-modifier='on-error'] {
+    .error {
+      display: inline;
+    }
+  }
+}
+
+.formUnit {
+  display: flex;
+  flex-direction: column;
+  gap: pxrem(5);
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: pxrem(10);
+  }
+
+  .heading {
+    line-height: $line-height_s;
+    font-weight: $font-weight_m;
+  }
+
+  .required {
+    color: $s-color_status_alert;
+    @include font($font-size_xs);
+  }
+
+  .body {
+    display: flex;
+    gap: pxrem(10);
+
+    &[data-modifier='textarea'] {
+      position: relative;
+      margin-bottom: calc(($font-size_s * $line-height_s) + pxrem(5));
+
+      .error {
+        position: absolute;
+        bottom: calc(($font-size_s * $line-height_s * -1) - pxrem(5));
+        left: 0;
+      }
+
+      .count {
+        position: absolute;
+        bottom: calc(($font-size_s * $line-height_s * -1) - pxrem(5));
+        right: 0;
+      }
+    }
+  }
+
+  .error {
+    display: none;
+    margin-top: pxrem(5);
+    color: $s-color_status_alert;
+    @include font($font-size_s);
+    line-height: $line-height_s;
+  }
+
+  .count {
+    color: $p-color_grey_600;
+    @include font($font-size_s);
+    line-height: $line-height_s;
+  }
+}

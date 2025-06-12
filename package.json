@@ -9,16 +9,42 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@google-analytics/data": "^4.7.0",
+    "@next/third-parties": "^14.1.4",
+    "@splidejs/react-splide": "^0.7.12",
+    "@types/html-to-text": "^9.0.4",
+    "dayjs": "^1.11.12",
+    "dotenv": "^16.5.0",
+    "highlight.js": "^11.11.1",
+    "html-react-parser": "^5.1.12",
+    "html-to-text": "^9.0.5",
+    "microcms-js-sdk": "^3.1.2",
+    "next": "14.2.4",
+    "nextjs-toploader": "^1.6.12",
+    "nodemailer": "^6.9.14",
+    "nprogress": "^0.2.0",
+    "plaiceholder": "^3.0.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.4"
+    "react-highlight-words": "^0.20.0",
+    "sass": "^1.77.6",
+    "schema-dts": "^1.1.2",
+    "zustand": "^4.5.4"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.15",
+    "@types/nprogress": "^0.2.3",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-highlight-words": "^0.20.0",
     "eslint": "^8",
-    "eslint-config-next": "14.2.4"
+    "eslint-config-next": "14.2.4",
+    "typescript": "^5"
   }
 }

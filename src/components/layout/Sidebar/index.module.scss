@@ -1,0 +1,48 @@
+@use '@/styles/global' as *;
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: pxrem(40);
+
+  &[data-modifier='twoColumn'] {
+    width: pxrem(200);
+  }
+
+  &[data-modifier='threeColumnLeft'] {
+    width: pxrem(180);
+  }
+
+  &[data-modifier='threeColumnRight'] {
+    width: pxrem(160);
+  }
+
+  @include media(sp) {
+    &[data-modifier='twoColumn'] {
+      width: 100%;
+      order: 2;
+    }
+
+    &[data-modifier='threeColumnLeft'] {
+      width: 100%;
+      order: 2;
+    }
+
+    &[data-modifier='threeColumnRight'] {
+      width: 100%;
+      order: 3;
+    }
+  }
+}
+
+.sidebarBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $s-color_background_primary;
+  border: 1px solid $p-color_grey_200;
+  border-radius: 4px;
+  padding: pxrem(20);
+  gap: pxrem(20);
+}

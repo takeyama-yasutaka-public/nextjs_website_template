@@ -1,0 +1,103 @@
+@use '@/styles/global' as *;
+
+.sidebarList {
+  display: flex;
+  flex-direction: column;
+  gap: pxrem(10);
+}
+
+.sidebarListMenu {
+  color: $s-color_menu-link_normal;
+  @include font($font-size_l);
+  line-height: $line-height_s;
+  font-weight: $font-weight_m;
+  text-decoration: none;
+  transition: $transition_high;
+
+  @media (hover: hover) {
+    &:hover {
+      color: $s-color_menu-link_hover;
+    }
+  }
+
+  @media (hover: none) {
+    -webkit-tap-highlight-color: transparent;
+
+    &:active {
+      color: $s-color_menu-link_hover;
+    }
+  }
+}
+
+.sidebarListDate {
+  display: flex;
+  flex-direction: column;
+  gap: pxrem(5);
+
+  a {
+    line-height: $line-height_s;
+  }
+
+  time {
+    @include font($font-size_xs);
+    line-height: $line-height_s;
+  }
+}
+
+$one-icon: 'data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20512%22%3E%3C!--!Font%20Awesome%20Free%206.5.2%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%2Ffree%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22%231a1a1a%22%20d%3D%22M160%2064c0-11.8-6.5-22.6-16.9-28.2s-23-5-32.8%201.6l-96%2064C-.5%20111.2-4.4%20131%205.4%20145.8s29.7%2018.7%2044.4%208.9L96%20123.8V416H32c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032h96%2096c17.7%200%2032-14.3%2032-32s-14.3-32-32-32H160V64z%22%2F%3E%3C%2Fsvg%3E';
+$two-icon: 'data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20512%22%3E%3C!--!Font%20Awesome%20Free%206.5.2%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%2Ffree%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22%231a1a1a%22%20d%3D%22M142.9%2096c-21.5%200-42.2%208.5-57.4%2023.8L54.6%20150.6c-12.5%2012.5-32.8%2012.5-45.3%200s-12.5-32.8%200-45.3L40.2%2074.5C67.5%2047.3%20104.4%2032%20142.9%2032C223%2032%20288%2097%20288%20177.1c0%2038.5-15.3%2075.4-42.5%20102.6L109.3%20416H288c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032H32c-12.9%200-24.6-7.8-29.6-19.8s-2.2-25.7%206.9-34.9L200.2%20234.5c15.2-15.2%2023.8-35.9%2023.8-57.4c0-44.8-36.3-81.1-81.1-81.1z%22%2F%3E%3C%2Fsvg%3E';
+$three-icon: 'data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20512%22%3E%3C!--!Font%20Awesome%20Free%206.5.2%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%2Ffree%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22%231a1a1a%22%20d%3D%22M0%2064C0%2046.3%2014.3%2032%2032%2032H272c13.2%200%2025%208.1%2029.8%2020.4s1.5%2026.3-8.2%2035.2L162.3%20208H184c75.1%200%20136%2060.9%20136%20136s-60.9%20136-136%20136H105.4C63%20480%2024.2%20456%205.3%20418.1l-1.9-3.8c-7.9-15.8-1.5-35%2014.3-42.9s35-1.5%2042.9%2014.3l1.9%203.8c8.1%2016.3%2024.8%2026.5%2042.9%2026.5H184c39.8%200%2072-32.2%2072-72s-32.2-72-72-72H80c-13.2%200-25-8.1-29.8-20.4s-1.5-26.3%208.2-35.2L189.7%2096H32C14.3%2096%200%2081.7%200%2064z%22%2F%3E%3C%2Fsvg%3E';
+$four-icon: 'data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20384%20512%22%3E%3C!--!Font%20Awesome%20Free%206.5.2%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%2Ffree%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22%231a1a1a%22%20d%3D%22M189%2077.6c7.5-16%20.7-35.1-15.3-42.6s-35.1-.7-42.6%2015.3L3%20322.4c-4.7%209.9-3.9%2021.5%201.9%2030.8S21%20368%2032%20368H256v80c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32V368h32c17.7%200%2032-14.3%2032-32s-14.3-32-32-32H320V160c0-17.7-14.3-32-32-32s-32%2014.3-32%2032V304H82.4L189%2077.6z%22%2F%3E%3C%2Fsvg%3E';
+$five-icon: 'data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20512%22%3E%3C!--!Font%20Awesome%20Free%206.5.2%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%2Ffree%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22%231a1a1a%22%20d%3D%22M32.5%2058.3C35.3%2043.1%2048.5%2032%2064%2032H256c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032H90.7L70.3%20208H184c75.1%200%20136%2060.9%20136%20136s-60.9%20136-136%20136H100.5c-39.4%200-75.4-22.3-93-57.5l-4.1-8.2c-7.9-15.8-1.5-35%2014.3-42.9s35-1.5%2042.9%2014.3l4.1%208.2c6.8%2013.6%2020.6%2022.1%2035.8%2022.1H184c39.8%200%2072-32.2%2072-72s-32.2-72-72-72H32c-9.5%200-18.5-4.2-24.6-11.5s-8.6-16.9-6.9-26.2l32-176z%22%2F%3E%3C%2Fsvg%3E';
+
+.sidebarListRanking {
+  position: relative;
+  padding-left: 1em;
+  line-height: $line-height_s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0.15em;
+    left: 0;
+  }
+
+  &:nth-child(1) {
+    &::before {
+      content: url($one-icon);
+      width: pxrem(7.6);
+    }
+  }
+
+  &:nth-child(2) {
+    &::before {
+      content: url($two-icon);
+      width: pxrem(9.4);
+    }
+  }
+
+  &:nth-child(3) {
+    &::before {
+      content: url($three-icon);
+      width: pxrem(9.4);
+    }
+  }
+
+  &:nth-child(4) {
+    &::before {
+      content: url($four-icon);
+      width: pxrem(11.1);
+    }
+  }
+
+  &:nth-child(5) {
+    &::before {
+      content: url($five-icon);
+      width: pxrem(9.4);
+    }
+  }
+}
+
+.sidebarListFilter {
+  line-height: $line-height_s;
+}

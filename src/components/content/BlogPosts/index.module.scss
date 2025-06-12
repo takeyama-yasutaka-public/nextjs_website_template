@@ -1,0 +1,63 @@
+@use '@/styles/global' as *;
+
+.blogPostsItem {
+  a {
+    display: flex;
+    padding: pxrem(10);
+    border-bottom: 1px solid $p-color_grey_300;
+    color: $s-color_menu-link_normal;
+    text-decoration: none;
+    line-height: $line-height_s;
+    gap: pxrem(20);
+    transition: $transition_high;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $p-color_opacity_black_005;
+      }
+    }
+
+    @media (hover: none) {
+      -webkit-tap-highlight-color: transparent;
+
+      &:active {
+        background-color: $p-color_opacity_black_005;
+      }
+    }
+
+    @include media(sp) {
+      flex-direction: column;
+      gap: pxrem(10);
+    }
+  }
+
+  img {
+    width: pxrem(120);
+    @include image-aspect-ratio(ratio_1-1);
+    flex-shrink: 0;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: pxrem(5);
+  }
+
+  .title {
+    @include font($font-size_l);
+    font-weight: $font-weight_m;
+  }
+
+  time {
+    @include font($font-size_s);
+  }
+
+  .text {
+    @include font($font-size_s);
+    line-height: $line-height_m;
+  }
+}
+
+.blogPostsItem :global .highlight {
+  background-color: $p-color_yellow_200;
+}

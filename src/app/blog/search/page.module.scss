@@ -1,0 +1,11 @@
+@use '@/styles/global' as *;
+
+.headerEvents {
+  @include font($font-size_s);
+  line-height: $line-height_s;
+}
+
+.contentSearch {
+  width: 100%;
+  max-width: pxrem(520);
+}

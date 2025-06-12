@@ -1,0 +1,24 @@
+@use '@/styles/global' as *;
+
+$angle-down-icon: 'data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2216%22%20width%3D%2214%22%20viewBox%3D%220%200%20448%20512%22%3E%3Cpath%20d%3D%22M201.4%20342.6c12.5%2012.5%2032.8%2012.5%2045.3%200l160-160c12.5-12.5%2012.5-32.8%200-45.3s-32.8-12.5-45.3%200L224%20274.7%2086.6%20137.4c-12.5-12.5-32.8-12.5-45.3%200s-12.5%2032.8%200%2045.3l160%20160z%22%20fill%3D%22%231a1a1a%22%2F%3E%3C%2Fsvg%3E';
+
+.formSelect {
+  width: 100%;
+  padding: pxrem(5) pxrem(35) pxrem(5) pxrem(10);
+  background: $p-color_white no-repeat right pxrem(10) center/0.9375em;
+  background-image: url($angle-down-icon);
+  border: 1px solid $s-color_border_field;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:focus {
+    padding: pxrem(4) pxrem(34) pxrem(4) pxrem(9);
+    background-position: right pxrem(9) center/0.9375em;
+    border: 2px solid $s-color_border_focused;
+    outline: none;
+  }
+
+  &[data-modifier='inquiry-type'] {
+    max-width: pxrem(400);
+  }
+}

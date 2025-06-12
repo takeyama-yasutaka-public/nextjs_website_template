@@ -1,0 +1,61 @@
+@use '@/styles/global' as *;
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  &[data-modifier='results'] {
+    background-color: $p-color_grey_800;
+
+    .heading {
+      color: $p-color_white;
+
+      &::after {
+        background-color: $p-color_white;
+      }
+    }
+  }
+
+  &[data-modifier='news'] {
+    background-color: $p-color_grey_50;
+  }
+
+  &[data-modifier='cta'] {
+    .inner {
+      max-width: $content_width;
+      padding: pxrem(20) pxrem(20) pxrem(40) pxrem(20);
+    }
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: pxrem(1000);
+    padding: pxrem(60) pxrem(40) pxrem(80) pxrem(40);
+    gap: pxrem(40);
+  }
+
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .heading {
+    width: fit-content;
+    color: $p-color_grey_900;
+    @include font($font-size_xxxxl);
+    line-height: $line-height_s;
+    font-weight: $font-weight_m;
+
+    &::after {
+      content: '';
+      display: block;
+      height: pxrem(4);
+      margin-top: pxrem(10);
+      background-color: $p-color_grey_900;
+      border-radius: 100px;
+    }
+  }
+}

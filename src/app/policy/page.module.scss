@@ -1,0 +1,19 @@
+@use '@/styles/global' as *;
+
+.policy {
+  display: flex;
+  flex-direction: column;
+  gap: pxrem(40);
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: pxrem(10);
+  }
+
+  .title {
+    @include font($font-size_l);
+    line-height: $line-height_s;
+    font-weight: $font-weight_m;
+  }
+}

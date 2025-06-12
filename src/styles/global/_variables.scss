@@ -1,0 +1,250 @@
+/*********************************
+    変数
+*********************************/
+
+/* primitive-color_digital-agency */ 
+$p-color_white: #FFFFFF;
+$p-color_black: #000000;
+$p-color_grey_50: #f2f2f2;
+$p-color_grey_100: #e6e6e6;
+$p-color_grey_200: #cccccc;
+$p-color_grey_300: #b3b3b3;
+$p-color_grey_400: #999999;
+$p-color_grey_417: #959595;
+$p-color_grey_500: #7f7f7f;
+$p-color_grey_536: #767676;
+$p-color_grey_600: #666666;
+$p-color_grey_700: #4d4d4d;
+$p-color_grey_800: #333333;
+$p-color_grey_900: #1a1a1a;
+$p-color_blue_50: #E8F1FE;
+$p-color_blue_100: #D9E6FF;
+$p-color_blue_200: #C5D7FB;
+$p-color_blue_300: #9DB7F9;
+$p-color_blue_400: #7096F8;
+$p-color_blue_500: #4979F5;
+$p-color_blue_600: #3460FB;
+$p-color_blue_700: #264AF4;
+$p-color_blue_800: #0031D8;
+$p-color_blue_900: #0017C1;
+$p-color_blue_1000: #00118F;
+$p-color_blue_1100: #000071;
+$p-color_blue_1200: #000060;
+$p-color_light-blue_50: #F0F9FF;
+$p-color_light-blue_100: #DCF0FF;
+$p-color_light-blue_200: #C0E4FF;
+$p-color_light-blue_300: #97D3FF;
+$p-color_light-blue_400: #57B8FF;
+$p-color_light-blue_500: #39ABFF;
+$p-color_light-blue_600: #008BF2;
+$p-color_light-blue_700: #0877D7;
+$p-color_light-blue_800: #0066BE;
+$p-color_light-blue_900: #0055AD;
+$p-color_light-blue_1000: #00428C;
+$p-color_light-blue_1100: #00316A;
+$p-color_light-blue_1200: #00234B;
+$p-color_cyan_50: #E9F7F9;
+$p-color_cyan_100: #C8F8FF;
+$p-color_cyan_200: #99F2FF;
+$p-color_cyan_300: #79E2F2;
+$p-color_cyan_400: #2BC8E4;
+$p-color_cyan_500: #01B7D6;
+$p-color_cyan_600: #00A3BF;
+$p-color_cyan_700: #008DA6;
+$p-color_cyan_800: #008299;
+$p-color_cyan_900: #006F83;
+$p-color_cyan_1000: #006173;
+$p-color_cyan_1100: #004C59;
+$p-color_cyan_1200: #003741;
+$p-color_green_50: #E6F5EC;
+$p-color_green_100: #C2E5D1;
+$p-color_green_200: #9BD4B5;
+$p-color_green_300: #71C598;
+$p-color_green_400: #51B883;
+$p-color_green_500: #2CAC6E;
+$p-color_green_600: #259D63;
+$p-color_green_700: #1D8B56;
+$p-color_green_800: #197A4B;
+$p-color_green_900: #115A36;
+$p-color_green_1000: #0C472A;
+$p-color_green_1100: #08351F;
+$p-color_green_1200: #032213;
+$p-color_lime_50: #EBFAD9;
+$p-color_lime_100: #D0F5A2;
+$p-color_lime_200: #C0F354;
+$p-color_lime_300: #ADE830;
+$p-color_lime_400: #9DDD15;
+$p-color_lime_500: #8CC80C;
+$p-color_lime_600: #7EB40D;
+$p-color_lime_700: #6FA104;
+$p-color_lime_800: #618E00;
+$p-color_lime_900: #507500;
+$p-color_lime_1000: #3E5A00;
+$p-color_lime_1100: #2C4100;
+$p-color_lime_1200: #1E2D00;
+$p-color_yellow_50: #FBF5E0;
+$p-color_yellow_100: #FFF0B3;
+$p-color_yellow_200: #FFE380;
+$p-color_yellow_300: #FFD43D;
+$p-color_yellow_400: #FFC700;
+$p-color_yellow_500: #EBB700;
+$p-color_yellow_600: #D2A400;
+$p-color_yellow_700: #B78F00;
+$p-color_yellow_800: #A58000;
+$p-color_yellow_900: #927200;
+$p-color_yellow_1000: #806300;
+$p-color_yellow_1100: #6E5600;
+$p-color_yellow_1200: #604B00;
+$p-color_orange_50: #FFEEE2;
+$p-color_orange_100: #FFDFCA;
+$p-color_orange_200: #FFC199;
+$p-color_orange_300: #FFA66D;
+$p-color_orange_400: #FF8D44;
+$p-color_orange_500: #FF7628;
+$p-color_orange_600: #FB5B01;
+$p-color_orange_700: #E25100;
+$p-color_orange_800: #C74700;
+$p-color_orange_900: #AC3E00;
+$p-color_orange_1000: #8B3200;
+$p-color_orange_1100: #6D2700;
+$p-color_orange_1200: #541E00;
+$p-color_red_50: #FDEEEE;
+$p-color_red_100: #FFDADA;
+$p-color_red_200: #FFBBBB;
+$p-color_red_300: #FF9696;
+$p-color_red_400: #FF7171;
+$p-color_red_500: #FF5454;
+$p-color_red_600: #FE3939;
+$p-color_red_700: #FA0000;
+$p-color_red_800: #EC0000;
+$p-color_red_900: #CE0000;
+$p-color_red_1000: #A90000;
+$p-color_red_1100: #850000;
+$p-color_red_1200: #620000;
+$p-color_magenta_50: #F3E5F4;
+$p-color_magenta_100: #FFD0FF;
+$p-color_magenta_200: #FFAEFF;
+$p-color_magenta_300: #FF8EFF;
+$p-color_magenta_400: #F661F6;
+$p-color_magenta_500: #F137F1;
+$p-color_magenta_600: #DB00DB;
+$p-color_magenta_700: #C000C0;
+$p-color_magenta_800: #AA00AA;
+$p-color_magenta_900: #8B008B;
+$p-color_magenta_1000: #6C006C;
+$p-color_magenta_1100: #500050;
+$p-color_magenta_1200: #3B003B;
+$p-color_purple_50: #F1EAFA;
+$p-color_purple_100: #ECDDFF;
+$p-color_purple_200: #DDC2FF;
+$p-color_purple_300: #CDA6FF;
+$p-color_purple_400: #BB87FF;
+$p-color_purple_500: #A565F8;
+$p-color_purple_600: #8843E1;
+$p-color_purple_700: #6F23D0;
+$p-color_purple_800: #5C10BE;
+$p-color_purple_900: #5109AD;
+$p-color_purple_1000: #41048E;
+$p-color_purple_1100: #30016C;
+$p-color_purple_1200: #21004B;
+
+/* primitive-color_project */
+$p-color_opacity_white_095: #FFFFFFF2;
+$p-color_opacity_black_005: #0000000D;
+$p-color_opacity_black_06: #00000099;
+$p-color_opacity_grey_900_06: #1A1A1A99;
+$p-color_brand-main_primary: #47E5FF;
+$p-color_brand-main_secondary: #CDF8FF;
+$p-color_brand-main_tertiary: #45A7B7;
+$p-color_brand-sub_primary: #FF5BA0;
+$p-color_brand-sub_secondary: #FFD9E9;
+$p-color_brand-sub_tertiary: #D00C5F;
+
+/* semantic-color */ 
+$s-color_text_body: $p-color_grey_900;
+$s-color_text_description: $p-color_grey_700;
+$s-color_text_place-holder: $p-color_grey_600;
+$s-color_text_on-fill: $p-color_white;
+$s-color_text_disabled: $p-color_grey_500;
+$s-color_link_normal: $p-color_blue_900;
+$s-color_link_hover: $p-color_blue_1000;
+$s-color_link_active: $p-color_blue_1000;
+$s-color_link_visited: $p-color_magenta_1000;
+$s-color_menu-link_normal: $p-color_grey_900;
+$s-color_menu-link_hover: $p-color_opacity_grey_900_06;
+$s-color_background_primary: $p-color_white;
+$s-color_background_secondary: $p-color_grey_100;
+$s-color_background_tertiary: $p-color_grey_50;
+$s-color_border_field: $p-color_grey_600;
+$s-color_border_focused: $p-color_light-blue_700;
+$s-color_border_disabled: $p-color_grey_300;
+$s-color_border_divider: $p-color_grey_300;
+$s-color_button_normal: $p-color_grey_600;
+$s-color_button_hover: $p-color_grey_800;
+$s-color_button_disabled: $p-color_grey_300;
+$s-color_status_success: $p-color_green_600;
+$s-color_status_alert: $p-color_red_800;
+$s-color_status_warning: $p-color_yellow_700;
+
+/* font-family */
+$font-family_primary: var(--font-notojp),'YuGothic','Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+
+/* font-size */ 
+$font-size_xxxxxl: 2.25rem; //36px
+$font-size_xxxxl: 2rem; //32px
+$font-size_xxxl: 1.75rem; //28px
+$font-size_xxl: 1.5rem; //24px
+$font-size_xl: 1.25rem; //20px
+$font-size_l: 1.125rem; //18px
+$font-size_m: 1rem; //16px
+$font-size_s: 0.875rem; //14px
+$font-size_xs: 0.75rem; //12px
+$font-size_xxs: 0.625rem; //10px
+
+/* line-height */
+$line-height_m: 1.8;
+$line-height_s: 1.4;
+$line-height_same: 1.0;
+
+/* letter-spacing */
+$letter-spacing_m: 0.04em;
+$letter-spacing_s: 0.02em;
+
+/* font-weight */
+$font-weight_r: normal;
+$font-weight_m: 500;
+$font-weight_b: bold;
+
+/* content-width */
+$content-width: 1200px;
+
+/* sidebar-width */
+$sidebar-width_2column: 200px;
+$sidebar-width_3column-left: 180px;
+$sidebar-width_3column-right: 160px;
+
+/* header-height */
+$header-height_pc: 4rem;
+$header-height_sp: 3rem;
+
+/* z-index */
+$z-index_pagetop: 10;
+$z-index_drawer-overlay: 20;
+$z-index_header: 30;
+$z-index_modal: 40;
+$z-index_loading: 50;
+
+/* elevation */
+$elevation_style1: 0px 2px 8px 1px rgba(0, 0, 0, 0.10), 0px 1px 5px 0px rgba(0, 0, 0, 0.30);
+$elevation_style2: 0px 2px 12px 2px rgba(0, 0, 0, 0.10), 0px 1px 6px 0px rgba(0, 0, 0, 0.30);
+$elevation_style3: 0px 4px 16px 3px rgba(0, 0, 0, 0.10), 0px 1px 6px 0px rgba(0, 0, 0, 0.30);
+$elevation_style4: 0px 6px 20px 4px rgba(0, 0, 0, 0.10), 0px 2px 6px 0px rgba(0, 0, 0, 0.30);
+$elevation_style5: 0px 8px 24px 5px rgba(0, 0, 0, 0.10), 0px 2px 10px 0px rgba(0, 0, 0, 0.30);
+$elevation_style6: 0px 10px 30px 6px rgba(0, 0, 0, 0.10), 0px 3px 12px 0px rgba(0, 0, 0, 0.30);
+$elevation_style7: 0px 12px 36px 7px rgba(0, 0, 0, 0.10), 0px 3px 14px 0px rgba(0, 0, 0, 0.30);
+$elevation_style8: 0px 14px 40px 7px rgba(0, 0, 0, 0.10), 0px 3px 16px 0px rgba(0, 0, 0, 0.30);
+
+/* transition */
+$transition_high: 0.1s;
+$transition_middle: 0.3s;
+$transition_low: 0.5s;

@@ -1,0 +1,65 @@
+@use '@/styles/global' as *;
+
+.priceBoxGroup {
+  display: flex;
+  flex-direction: row;
+  gap: pxrem(20);
+
+  @include media(sp) {
+    flex-direction: column;
+  }
+
+  > div {
+    flex: 1;
+  }
+}
+
+.priceBox {
+  background-color: $p-color_white;
+  border: 1px solid $p-color_grey_600;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    padding: pxrem(10);
+    background-color: $p-color_grey_600;
+    color: $s-color_text_on-fill;
+    line-height: $line-height_s;
+    gap: pxrem(5);
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .price {
+    @include font($font-size_xxl);
+    font-weight: $font-weight_b;
+    text-align: center;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    padding: pxrem(10);
+    @include font($font-size_s);
+    gap: pxrem(10);
+  }
+}
+
+.priceBoxfeatures {
+  display: flex;
+  flex-direction: column;
+
+  .priceBoxfeaturesHeader {
+    padding: pxrem(5);
+    background-color: $p-color_grey_100;
+    line-height: $line-height_s;
+    text-align: center;
+  }
+
+  .priceBoxfeaturesText {
+    padding: pxrem(5);
+    text-align: center;
+  }
+}

@@ -1,0 +1,43 @@
+@use '@/styles/global' as *;
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: pxrem(10);
+  align-items: center;
+  @include font($font-size_xs);
+  line-height: $line-height_s;
+
+  a {
+    color: $s-color_menu-link_normal;
+    text-decoration: none;
+    transition: $transition_high;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $s-color_menu-link_hover;
+      }
+    }
+
+    @media (hover: none) {
+      -webkit-tap-highlight-color: transparent;
+
+      &:active {
+        color: $s-color_menu-link_hover;
+      }
+    }
+  }
+
+  p {
+    color: $p-color_grey_500;
+  }
+
+  .icon {
+    @include font($font-size_xs);
+    min-width: 0.5625rem;
+
+    &:last-child {
+      display: none;
+    }
+  }
+}

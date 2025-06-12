@@ -1,0 +1,49 @@
+@use '@/styles/global' as *;
+
+.footerNav {
+  display: flex;
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: pxrem(20);
+    max-width: 32rem;
+
+    @include media(sp) {
+      justify-content: flex-start;
+      max-width: none;
+    }
+  }
+
+  li {
+    line-height: $line-height_same;
+
+    @include media(sp) {
+      width: calc((100% - pxrem(20)) / 2);
+      max-width: 12rem;
+    }
+  }
+
+  a {
+    color: $s-color_menu-link_normal;
+    @include font($font-size_s);
+    line-height: $line-height_s;
+    text-decoration: none;
+    transition: $transition_high;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $s-color_menu-link_hover;
+      }
+    }
+
+    @media (hover: none) {
+      -webkit-tap-highlight-color: transparent;
+
+      &:active {
+        color: $s-color_menu-link_hover;
+      }
+    }
+  }
+}

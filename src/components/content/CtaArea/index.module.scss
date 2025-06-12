@@ -1,0 +1,21 @@
+@use '@/styles/global' as *;
+
+.ctaArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: pxrem(20);
+  gap: pxrem(20);
+  background-color: $s-color_background_tertiary;
+  border-radius: 8px;
+
+  &[data-modifier='bgNone'] {
+    background-color: transparent;
+  }
+}
+
+.ctaAreaTitle {
+  @include font($font-size_xxl);
+  line-height: $line-height_s;
+}

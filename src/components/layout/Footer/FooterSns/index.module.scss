@@ -1,0 +1,51 @@
+@use '@/styles/global' as *;
+
+.footerSnsHeader {
+  display: flex;
+
+  @include media(sp) {
+    justify-content: center;
+  }
+
+  p {
+    @include font($font-size_l);
+    line-height: $line-height_s;
+    font-weight: $font-weight_m;
+  }
+}
+
+.footerSnsBody {
+  display: flex;
+  gap: pxrem(10);
+
+  @include media(sp) {
+    justify-content: center;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    transition: $transition_high;
+
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    @media (hover: none) {
+      -webkit-tap-highlight-color: transparent;
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  img {
+    width: pxrem(36);
+    min-width: pxrem(36);
+    height: auto;
+  }
+}

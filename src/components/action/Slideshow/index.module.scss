@@ -1,0 +1,193 @@
+@use '@/styles/global' as *;
+
+.slideshow {
+  .track {
+    height: calc(100vh - $header-height_pc);
+
+    @include media(header-sp) {
+      height: calc(100vh - $header-height_sp);
+    }
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .pcOnly {
+    @include media(sp) {
+      display: none;
+    }
+  }
+
+  .spOnly {
+    @include media(pc) {
+      display: none;
+    }
+  }
+}
+
+.slideshowArrow {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: pxrem(60);
+  height: 100%;
+  transition: $transition_high;
+  z-index: 1;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: #ffffff1a;
+
+      .icon {
+        color: $p-color_white;
+      }
+    }
+  }
+
+  @media (hover: none) {
+    -webkit-tap-highlight-color: transparent;
+
+    &:active {
+      background-color: #ffffff1a;
+
+      .icon {
+        color: $p-color_white;
+      }
+    }
+  }
+
+  &[data-modifier='prev'] {
+    left: max(0px, (100% - $content_width) / 2);
+  }
+
+  &[data-modifier='next'] {
+    right: max(0px, (100% - $content_width) / 2);
+  }
+
+  @include media(sp) {
+    width: pxrem(30);
+  }
+
+  .icon {
+    color: #ffffff80;
+    @include font(24px);
+    transition: $transition_high;
+
+    @include media(sp) {
+      width: pxrem(18);
+    }
+  }
+}
+
+.slideshowFooter {
+  position: absolute;
+  display: flex;
+  left: 0;
+  right: 0;
+  bottom: pxrem(20);
+  justify-content: center;
+  align-items: center;
+  gap: pxrem(10);
+  z-index: 1;
+
+  @include media(sp) {
+    bottom: pxrem(10);
+  }
+
+  .toggle {
+    display: flex;
+  }
+
+  .play,
+  .pause {
+    line-height: $line-height_same;
+  }
+
+  .icon {
+    color: #ffffff80;
+    @include font(24px);
+    transition: $transition_high;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $p-color_white;
+      }
+    }
+
+    @media (hover: none) {
+      -webkit-tap-highlight-color: transparent;
+
+      &:active {
+        color: $p-color_white;
+      }
+    }
+
+    @include media(sp) {
+      @include font(20px);
+    }
+  }
+
+  .divider {
+    width: 1px;
+    height: pxrem(22);
+    background-color: #ffffff80;
+
+    @include media(sp) {
+      height: pxrem(18);
+    }
+  }
+
+  .pagination {
+    gap: pxrem(10);
+  }
+}
+
+$regular-circl-icon: 'data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C!--!Font%20Awesome%20Free%206.6.0%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%2Ffree%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M464%20256A208%20208%200%201%200%2048%20256a208%20208%200%201%200%20416%200zM0%20256a256%20256%200%201%201%20512%200A256%20256%200%201%201%200%20256z%22%2F%3E%3C%2Fsvg%3E';
+$regular-circle-dot-icon: 'data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C!--!Font%20Awesome%20Free%206.6.0%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%2Ffree%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M464%20256A208%20208%200%201%200%2048%20256a208%20208%200%201%200%20416%200zM0%20256a256%20256%200%201%201%20512%200A256%20256%200%201%201%200%20256zm256-96a96%2096%200%201%201%200%20192%2096%2096%200%201%201%200-192z%22%2F%3E%3C%2Fsvg%3E';
+
+.slideshowFooter :global .slideshow__page {
+  display: flex;
+
+  &::before {
+    content: url($regular-circl-icon);
+    display: inline-block;
+    width: pxrem(20);
+    opacity: 0.5;
+    transition: $transition_high;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      &::before {
+        color: $p-color_white;
+      }
+    }
+  }
+
+  @media (hover: none) {
+    -webkit-tap-highlight-color: transparent;
+
+    &:active {
+      &::before {
+        color: $p-color_white;
+      }
+    }
+  }
+
+  &.is-active {
+    &::before {
+      content: url($regular-circle-dot-icon);
+    }
+  }
+
+  @include media(sp) {
+    &::before {
+      @include font(16px);
+    }
+  }
+}
