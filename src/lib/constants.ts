@@ -7,7 +7,7 @@ import siteImg from '@/images/image_16-9.png'
 
 //サイトメタデータの定義
 export const siteMeta = {
-  siteTitle: '共通テンプレート',
+  siteTitle: 'WEBサイトテンプレート',
   siteDesc: 'description',
   siteUrl: 'https://example.com',
   siteLang: 'ja',
